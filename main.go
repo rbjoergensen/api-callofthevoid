@@ -11,7 +11,7 @@ func main() {
 	router.GET("/", getHealth)
 	router.GET("/albums", getAlbums)
 
-	err := router.Run("localhost:80")
+	err := router.Run(":80")
 	if err != nil {
 		log.Fatal(err)
 	}
