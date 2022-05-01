@@ -8,11 +8,10 @@ ADD main.go /go/src/app
 ADD go.mod  /go/src/app
  
 RUN go get .
-RUN go build main.go
-RUN ls -la 
+RUN go build .
 
 FROM alpine:3.15
  
-COPY --from=build_container "/go/src/app/api-callofthevoid" api-callofthevoid
+COPY --from=build_container "/go/src/app/api_callofthevoid" api_callofthevoid
  
-ENTRYPOINT ./api-callofthevoid
+ENTRYPOINT ./api_callofthevoid

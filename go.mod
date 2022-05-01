@@ -1,4 +1,4 @@
-module api-callofthevoid
+module api_callofthevoid
 
 go 1.18
 

@@ -1,4 +1,4 @@
-package api-callofthevoid
+package api_callofthevoid
 
 import (
 	"github.com/gin-gonic/gin"
