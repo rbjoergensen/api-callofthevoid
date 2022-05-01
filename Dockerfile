@@ -9,6 +9,7 @@ ADD go.mod  /go/src/app
  
 RUN go get .
 RUN go build main.go
+RUN ls -la 
 
 FROM alpine:3.15
  
