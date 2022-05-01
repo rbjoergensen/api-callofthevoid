@@ -13,6 +13,6 @@ RUN ls -la
 
 FROM alpine:3.15
  
-COPY --from=build_container "/go/src/app/api_callofthevoid" api_callofthevoid
+COPY --from=build_container "/go/src/app/main" main
  
-ENTRYPOINT ./api_callofthevoid
+ENTRYPOINT ./main
