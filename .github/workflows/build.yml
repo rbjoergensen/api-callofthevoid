@@ -45,3 +45,19 @@ jobs:
 
       - name: Docker push
         run: docker push ghcr.io/rbjoergensen/api-callofthevoid:${{ needs.calculate-version.outputs.semVer }}
+
+  tag:
+    name: Tag
+    runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
+    needs: 
+      - calculate-version
+      - build
+    steps:
+      - uses: actions/checkout@v3
+        name: Checkout code
+
+      - name: Create tag
+        run: |
+          git tag ${{ needs.calculate-version.outputs.semVer }}
+          git push origin ${{ needs.calculate-version.outputs.semVer }}
