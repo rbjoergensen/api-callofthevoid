@@ -49,7 +49,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: docker.pkg.github.com/rbjoergensen/api-callofthevoid/api-callofthevoid:${{ needs.calculate-version.outputs.semVer }}
+          tags: docker.pkg.github.com/rbjoergensen/api-callofthevoid:${{ needs.calculate-version.outputs.semVer }}
 
   tag:
     name: Tag
