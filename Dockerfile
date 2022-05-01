@@ -14,5 +14,7 @@ RUN ls -la
 FROM alpine:3.15
  
 COPY --from=build_container "/go/src/app/main" main
+
+EXPOSE 80
  
 ENTRYPOINT ./main
