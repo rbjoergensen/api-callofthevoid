@@ -7,6 +7,7 @@ WORKDIR /go/src/app
 ADD main.go /go/src/app
 ADD go.mod  /go/src/app
  
+RUN go get .
 RUN go build main.go
 
 FROM alpine:3.15
